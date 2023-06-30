@@ -1,0 +1,4 @@
+com\example\gestionempleados\entity\EmpleadoTest.class
+com\example\gestionempleados\GestionempleadosApplicationTests.class
+com\example\gestionempleados\controller\EmpleadoControllerTest.class
+com\example\gestionempleados\service\implement\EmpleadoServiceImplTest.class
