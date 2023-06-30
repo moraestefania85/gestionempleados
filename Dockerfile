@@ -1,12 +1,6 @@
-# Usar la imagen oficial de OpenJDK 8
-FROM openjdk:8-jdk-alpine
+FROM eclipse-temurin:17-jdk-alpine
+VOLUME /tmp
+COPY target/*.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+EXPOSE 8080
 
-# Opcional: establecer un directorio de trabajo
-WORKDIR /app
-
-# Copiar el archivo jar de aplicación al contenedor
-ARG JAR_FILE=target/gestionempleados-0.0.1-SNAPSHOT.jar
-COPY ${JAR_FILE} app.jar
-
-
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
